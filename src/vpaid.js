@@ -25,7 +25,7 @@ module.exports = {
 		var vpaidContainer = document.createElement('div');
 		vpaidContainer.className = 'vpaid';
 		vpaidContainer.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:0;visibility:none;overflow:hidden;z-index:4999;display:flex;align-items:center;justify-content:center;';
-		vpaidContainer.innerHTML = '<video id="vpaid-video" preload="none" muted autoplay>Loading, please wait..</video>';
+		vpaidContainer.innerHTML = '<video id="vpaid-video"  muted autoplay>Loading, please wait..</video>';
 		var vpaidSkipAd = document.createElement('div');
 		vpaidSkipAd.className = 'vpaid_counter';
 		vpaidSkipAd.style.cssText = 'position:absolute;top:50%;left:75%;width:26%;height:0;visibility:none;overflow:hidden;z-index:4999;display:flex;align-items:center;justify-content:center;cursor:pointer;border:white;';
@@ -176,12 +176,9 @@ module.exports = {
 							if (a[0].playerHandles == true) {
 								unitConfig.tracker.click()
 
-							} else {
-								if ([0].playerHandles == false) {
-
-								}
 							}
 						}
+
 						// TODO: tracker needs to implement (ClickTracking is a VAST element under<VideoClicks>)
 					},
 					AdError: function (error) {
